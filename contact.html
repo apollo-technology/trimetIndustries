@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<style>
+.margin-top {
+    margin-top: 100px;
+}
+
+.margin-left {
+    margin-left: 100px;
+}
+</style>
 
 <body>
     <!-- Navbar (sit on top) -->
@@ -21,4 +31,25 @@
             </li>
         </ul>
     </div>
+    <div id="map" class="w3-left margin-left margin-top" style="width:700px;height:300px;background:yellow"></div>
+    <div class="margin-top w3-right w3-container w3-border-left">
+
+        <p><b>Located at</b>: 829 Duell Road, Traverse City, MI 49686
+            <br />
+            <br /> <b>Hours of Operation</b>: Monday - Thursday: 6:30am - 5:00pm
+            <br />
+            <br /> <b>Email</b>:<a href="mailto:info@trimetindustries.com">info@trimetindustries.com</a>
+            <br /> <b>Phone</b>:<a href="tel:+1-231-929-9100"> 231.929.9100</a>
+            <br /> <b>Fax</b>: 231.929.9107</p>
+    </div>
 </body>
+<script>
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.12),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
