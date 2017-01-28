@@ -6,9 +6,6 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRQrbNcpfDFYW48p1UY-xm94ZSsYAf0HI&callback=initMap"></script>
 <style>
-.margin-top-header {
-    margin-top: 55px;
-}
 
 .margin-top-info {
     margin-top: 1px;
@@ -22,6 +19,16 @@
     margin-right: 100px;
 }
 
+.margin-bottombuttons {
+    margin-bottom: 10px;
+}
+
+.margin-callbutton {
+    margin-left: 10px;
+}
+.extraspace {
+    margin-bottom: 80px;
+}
 </style>
 
 <body>
@@ -41,29 +48,28 @@
             </li>
         </ul>
     </div>
+    <!--Header-->
     <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;">
         <img class="w3-image" src="http://www.buildingekart.com/media/catalog/category/stock-photo-stack-of-steel-reinforcement-rods-for-construction-background-selective-focus-198948719_4.jpg" alt="Architecture" width="1500" height="800">
         <div class="w3-display-middle w3-margin-top w3-center">
             <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>CONTACT</b></h1>
         </div>
     </header>
-    <div class="margin-top-info w3-container w3-border">
+    <div class="margin-top-info extraspace w3-container w3-border">
         <div id="map" class="w3-left margin-left" style="width:800px;height:295px;background:white"></div>
         <div class="w3-right w3-container w3-border-left margin-right">
             <p><b>Located at</b>: 829 Duell Road, Traverse City, MI 49686
                 <br />
                 <br /> <b>Hours of Operation</b>: Monday - Thursday: 6:30am - 5:00pm
                 <br />
-                <br /><b><u>Contact:</u></b>
-                <br />
-                <br /> <b>Email</b>: <a href="mailto:info@trimetindustries.com">info@trimetindustries.com</a>
-                <br />
-                <br /> <b>Phone</b>: <a href="tel:+1-231-929-9100">231.929.9100</a>
-                <br />
+                <br /> <b>Email</b>: info@trimetindustries.com</a>
+                <br /> 
+                <br /> <b>Phone</b>: 231.929.9100</a>
+                <br /> 
                 <br /> <b>Fax</b>: 231.929.9107</p>
-            <br />
+                <br /> <button onclick="emailButton()" class="w3-btn margin-bottombuttons" >Email</button> <button  onclick="callButton()" class="w3-btn margin-bottombuttons margin-callbutton" >Call</button>
+
         </div>
-    </div>
 </body>
 <script>
 function initMap() {
@@ -83,4 +89,13 @@ function initMap() {
         title: 'TriMet Industries'
     });
 }
+
+function emailButton() {
+    window.location.href="mailto:info@trimetindustries.com";
+}
+
+function callButton() {
+    window.location.href="tel:+12319299100";
+}
+
 </script>
