@@ -6,13 +6,12 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRQrbNcpfDFYW48p1UY-xm94ZSsYAf0HI&callback=initMap"></script>
 <style>
-
 .dividertop {
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .margin-top-info {
-    margin-top: 1px;
+    margin-top: 15px;
 }
 
 .margin-left {
@@ -30,9 +29,6 @@
 .margin-callbutton {
     margin-left: 10px;
 }
-.extraspace {
-    margin-bottom: 80px;
-}
 </style>
 
 <body>
@@ -44,28 +40,32 @@
             </li>
             <!-- Float links to the right. Hide them on small screens -->
             <li class="w3-right w3-hide-small">
-                <a href="capabilities.html" class="w3-left">Capabilities</a>
-                <a href="docks.html" class="w3-left">Docks</a>
-                <a href="winches.html" class="w3-left">Winches</a>
+                <a href="brochure.html" class="w3-left">2017 Brochure</a>
+                <a href="docks-winches.html" class="w3-left">Docks/Winches</a>
                 <a href="gallery.html" class="w3-left">Gallery</a>
-                <a href="contact.html" class="w3-left w3-margin-right">Contact</a>
+                <a href="dealers.html" class="w3-left">Dealers</a>
+                <a href="contact.html" class="w3-left w3-margin-right"><b>Contact</b></a>
             </li>
         </ul>
     </div>
-    <div class="margin-top-info extraspace w3-container w3-border">
-        <div id="map" class="w3-left margin-left dividertop" style="width:800px;height:295px;background:white"></div>
-        <div class="w3-right w3-container w3-border-left margin-right dividertop">
+    <div class="w3-padding w3-black w3-opacity-min w3-center dividertop">
+        <h1 class="w3-xxlarge w3-text-white"><b>CONTACT</b></h1>
+    </div>
+    <div class="margin-top-info w3-container w3-border">
+        <div id="map" class="w3-left margin-left" style="width:802px;height:295px;background:white; border: 2px solid black;"></div>
+        <div class="w3-right w3-container w3-border-left margin-right">
             <p><b>Located at</b>: 829 Duell Road, Traverse City, MI 49686
                 <br />
                 <br /> <b>Hours of Operation</b>: Monday - Thursday: 6:30am - 5:00pm
                 <br />
                 <br /> <b>Email</b>: info@trimetindustries.com</a>
-                <br /> 
+                <br />
                 <br /> <b>Phone</b>: 231.929.9100</a>
-                <br /> 
+                <br />
                 <br /> <b>Fax</b>: 231.929.9107</p>
-                <br /> <button onclick="emailButton()" class="w3-btn margin-bottombuttons" >Email</button> <button  onclick="callButton()" class="w3-btn margin-bottombuttons margin-callbutton" >Call</button>
-
+            <br />
+            <button onclick="emailButton()" class="w3-btn margin-bottombuttons">Email</button>
+            <button onclick="callButton()" class="w3-btn margin-bottombuttons margin-callbutton">Call</button>
         </div>
 </body>
 <script>
@@ -88,11 +88,10 @@ function initMap() {
 }
 
 function emailButton() {
-    window.location.href="mailto:info@trimetindustries.com";
+    window.location.href = "mailto:info@trimetindustries.com";
 }
 
 function callButton() {
-    window.location.href="tel:+12319299100";
+    window.location.href = "tel:+12319299100";
 }
-
 </script>

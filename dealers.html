@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>TRIMET Industries</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRQrbNcpfDFYW48p1UY-xm94ZSsYAf0HI&callback=initMap"></script>
+<style>
+.img-padding-left {
+    padding-left: 420px;
+}
+
+.dividertop {
+    margin-top: 70px;
+}
+</style>
+
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <ul class="w3-navbar w3-white w3-wide w3-padding-8 w3-card-2">
+            <li>
+                <a href="index.html" class="w3-margin-left"><b class="w3-padding w3-black w3-opacity-min">TRIMET</b> Industries</a>
+            </li>
+            <!-- Float links to the right. Hide them on small screens -->
+            <li class="w3-right w3-hide-small">
+                <a href="brochure.html" class="w3-left">2017 Brochure</a>
+                <a href="docks-winches.html" class="w3-left">Docks/Winches</a>
+                <a href="gallery.html" class="w3-left">Gallery</a>
+                <a href="dealers.html" class="w3-left"><b>Dealers</b></a>
+                <a href="contact.html" class="w3-left w3-margin-right">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="w3-padding w3-black w3-opacity-min w3-center dividertop">
+        <h1 class="w3-xxlarge w3-text-white"><b>DEALERS</b></h1>
+    </div>
+    <div>
+        <h3 class="w3-center">Our docks are only sold through our dealers, listed below. If you wish to become a dealer,<br/> or for more information, please contact Tony at 231-342-6330 or tony@trimetindustries.com.</h3>
+        <br/>
+        <div id="map" style="width:1000px;height:450px; background:white; margin-left: 220px; border: 2px solid black;"></div>
+    </div>
+</body>
+<script>
+function initMap() {
+    var myLatLng = {
+        lat: 44.7319222,
+        lng: -85.5931055
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 6,
+        center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'TriMet Industries'
+    });
+}
+</script>
