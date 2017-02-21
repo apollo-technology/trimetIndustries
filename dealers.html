@@ -47,6 +47,11 @@ function initMap() {
         lat: 44.7319222,
         lng: -85.5931055
     };
+    var myLatLng2
+     = {
+        lat: 45,
+        lng: -85.5932
+    };
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 6,
@@ -55,6 +60,11 @@ function initMap() {
 
     var marker = new google.maps.Marker({
         position: myLatLng,
+        map: map,
+        title: 'TriMet Industries'
+    });
+    var marker2 = new google.maps.Marker({
+        position: myLatLng2,
         map: map,
         title: 'TriMet Industries'
     });
